@@ -1,5 +1,7 @@
   - 分类
     - [贝叶斯分类器](/分类/贝叶斯分类器.md)
+  - 回归
+    - [线性回归](/回归/线性回归.md)
   - [导论](/导论/README.md)
     - [MachineLearning Is Fun For Anyone Curious About ML](/导论/MachineLearning-Is-Fun-For-Anyone-Curious-About-ML.md)
     - [机器学习三要素](/导论/机器学习三要素.md)
@@ -14,7 +16,10 @@
       
     - [数据清理](/特征工程/数据清理/README.md)
       
-    - [数据集特点](/特征工程/数据集特点.md)
+    - [数据集](/特征工程/数据集/README.md)
+      - [数据集特点](/特征工程/数据集/数据集特点.md)
+      - [文本](/特征工程/数据集/文本/README.md)
+        - [常用数据集介绍](/特征工程/数据集/文本/常用数据集介绍.md)
     - [特征编码](/特征工程/特征编码/README.md)
       - [README.old](/特征工程/特征编码/README.old.md)
       - [TF IDF](/特征工程/特征编码/TF-IDF.md)
