@@ -178,8 +178,6 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
 
 上文中，我们通过一个简单的房价预测的例子了解了机器学习的基本含义，在本节，我们将会继续用一些泛化的算法搭配上一些特定的数据做些有趣的事情。本节的例子大概如下图所示，一个很多人的童年必备的游戏：马里奥，让我们用神经网络帮你设计一些新奇的关卡吧。
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/1-pJ2mc_79M544T9mg19XIGA.gif)
-
 在正文之前，还是要强调下，本文是面向所有对机器学习有兴趣的朋友，所以大牛们看到了勿笑。
 
 ## Introduction To Neural Networks: 神经网络模型初探
@@ -310,8 +308,6 @@ In 2015, Nintendo 宣布了 [Super Mario Maker™](http://supermariomaker.ninten
 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-F5j2M7usF53vF4stTO0Tsw.png)
 
 这个制作器能够让你去手动制作马里奥的一些关卡，很不错的和朋友之间进行互动的小工具。你可以添加常见的障碍物或者敌人到你自己设计的关卡中，有点像可视化的乐高工作台。我们可以使用刚才创建的用于预测 Hemingway 文本的模型来自动地创建一个超级马里奥的关卡。首先呢，我们还是需要去找一些训练数据，最早的 1985 年推出的经典的超级马里奥的游戏不错:
-
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/1-hURFJf6p7dZYlpAZScKGDA.png)
 
 这个游戏有大概 32 个关卡，其中 70% 的场景都有相似的外观，很适合用来做训练数据啊。我找来了每一关的设计方案，网上有很多类似的教程教你怎么从内存中读取游戏的设计方案，有兴趣的话你也可以试试。下面呢就是一个经典的全景视图：
 
@@ -546,8 +542,6 @@ LL+<&=------P-------------
 
 譬如上面提到的滑动窗口搜索，我们将原图片分割为独立的小块，大概如下图所示:
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/1-xS7EugfgQHk68iph7GHpQg.png)
-
 通过这一步操作，我们将原始图片分割为了 77 张大小相同的小图片。
 
 #### 将每个图片瓷砖输入到小的神经网络中
@@ -596,11 +590,7 @@ Max pooling 处理过程上呢就是将原特征矩阵按照 2\*2 分割为不�
 
 概念了解了，下面我们就动手写一个真正的鸟类分类器。同样地，我们需要先收集一些数据。免费的 [CIFAR10 data set](https://www.cs.toronto.edu/~kriz/cifar.html)包含了关于鸟儿的 6000 多张图片以及 52000 张不是鸟类的图片。如果不够，[Caltech-UCSD Birds-200–2011 data set](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) 中还有 12000 张鸟类的图片。其中关于鸟类的图片大概如下所示:
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/1-r9I5D3NXCn8gnLOjahuSQA.png)
-
 非鸟类的图片大概这样:
-
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/1-ODaXoLQY4-D7zqHrqeA4Uw.png)
 
 这边我们会使用[TFLearn](http://tflearn.org/)来构建我们的程序，TFLearn 是对于 Google 的 [TensorFlow](https://www.tensorflow.org/) 深度学习库的一个包裹，提供了更易用的 API，可以让编写卷积神经网络就好像编译我们其他的网络层一样简单：
 
