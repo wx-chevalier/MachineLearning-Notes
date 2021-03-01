@@ -51,7 +51,7 @@ forecast future behaviors, outcomes, and trends.
 
 ![常用的机器学习分类与回归算法](https://s2.ax1x.com/2019/10/26/KBMFud.png)
 
-# Nav | 导读
+# Nav | 关联导航
 
 # About | 关于
 
