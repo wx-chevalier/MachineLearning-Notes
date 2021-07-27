@@ -200,7 +200,7 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
 return price
 ```
 
-如果用图来表示的话，大概是这个样子 :
+如果用图来表示的话，大概是这个样子
 
 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-LlTIwE6h0l1Aoln2GlAGcw.png)
 
