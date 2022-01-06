@@ -56,49 +56,49 @@
 
 ```py
 def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
-  price = 0
-  # 俺们这嘎达，房子基本上每平方200
-  price_per_sqft = 200
-  if neighborhood == "hipsterton":
-    # 市中心会贵一点
-    price_per_sqft = 400
-  elif neighborhood == "skid row":
-    # 郊区便宜点
-    price_per_sqft = 100
-  # 可以根据单价*房子大小得出一个基本价格
-  price = price_per_sqft * sqft
-  # 基于房间数做点调整
-  if num_of_bedrooms == 0:
-    # 没房间的便宜点
-    price = price — 20000
-  else:
-    # 房间越多一般越值钱
-    price = price + (num_of_bedrooms * 1000)
- return price
+  price = 0
+  # 俺们这嘎达，房子基本上每平方200
+  price_per_sqft = 200
+  if neighborhood == "hipsterton":
+    # 市中心会贵一点
+    price_per_sqft = 400
+  elif neighborhood == "skid row":
+    # 郊区便宜点
+    price_per_sqft = 100
+  # 可以根据单价*房子大小得出一个基本价格
+  price = price_per_sqft * sqft
+  # 基于房间数做点调整
+  if num_of_bedrooms == 0:
+    # 没房间的便宜点
+    price = price — 20000
+  else:
+    # 房间越多一般越值钱
+    price = price + (num_of_bedrooms * 1000)
+ return price
 ```
 
 这就是典型的简答的基于经验的条件式判断，你也能通过这种方法得出一个较好地模型。不过如果数据多了或者价格发生较大波动的时候，你就有心无力了。而应用机器学习算法则是让计算机去帮你总结出这个规律，大概如下所示：
 
 ```py
 def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
-  price = <computer, plz do some math for me>
-  return price
+  price = <computer, plz do some math for me>
+  return price
 ```
 
 通俗的理解，价格好比一锅炖汤，而卧室的数量、客厅面积以及邻近的街区就是食材，计算机帮你自动地根据不同的食材炖出不同的汤来。如果你是喜欢数学的，那就好比有三个自变量的方程，代码表述的话大概是下面这个样子：
 
 ```py
 def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
- price = 0
- # a little pinch of this
- price += num_of_bedrooms * .841231951398213
- # and a big pinch of that
- price += sqft * 1231.1231231
- # maybe a handful of this
- price += neighborhood * 2.3242341421
- # and finally, just a little extra salt for good measure
- price += 201.23432095
- return price
+ price = 0
+ # a little pinch of this
+ price += num_of_bedrooms * .841231951398213
+ # and a big pinch of that
+ price += sqft * 1231.1231231
+ # maybe a handful of this
+ price += neighborhood * 2.3242341421
+ # and finally, just a little extra salt for good measure
+ price += 201.23432095
+ return price
 ```
 
 注意，上面那些譬如 `.841...` 这样奇怪的数据，它们就是被称为 `权重`，只要我们能根据数据寻找出最合适的权重，那我们的函数就能较好地预测出房屋的价格。
@@ -113,16 +113,16 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
 
 ```py
 def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
-  price = 0
-  # a little pinch of this
-  price += num_of_bedrooms * 1.0
-  # and a big pinch of that
-  price += sqft * 1.0
-  # maybe a handful of this
-  price += neighborhood * 1.0
-  # and finally, just a little extra salt for good measure
-  price += 1.0
-  return price
+  price = 0
+  # a little pinch of this
+  price += num_of_bedrooms * 1.0
+  # and a big pinch of that
+  price += sqft * 1.0
+  # maybe a handful of this
+  price += neighborhood * 1.0
+  # and finally, just a little extra salt for good measure
+  price += 1.0
+  return price
 ```
 
 ### Step 2
@@ -190,13 +190,13 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
 
 ```py
 def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
- price = 0
+ price = 0
 # a little pinch of this
- price += num_of_bedrooms * 0.123
+ price += num_of_bedrooms * 0.123
 # and a big pinch of that
- price += sqft * 0.41
+ price += sqft * 0.41
 # maybe a handful of this
- price += neighborhood * 0.57
+ price += neighborhood * 0.57
 return price
 ```
 
@@ -265,40 +265,40 @@ amo k ns aeo?cdse nh a taei.rairrhelardr er deffijha
 ```
 hing soor ither. And the caraos, and the crowebel for figttier and ale the room of me? Streat was not to him Bill-stook of the momansbed mig out ust on the bull, out here. I been soms
 inick stalling that aid.
- “Hon’t me and acrained on .Hw’s don’t you for the roed,” In’s pair.”
- “Alough marith him.”
+ “Hon’t me and acrained on .Hw’s don’t you for the roed,” In’s pair.”
+ “Alough marith him.”
 ```
 
 已经能够识别基本的句型结构与语法规则咯，甚至能够较好地为上下文添加标点符号了，不过还是存在着大量的无意义词汇，我们继续增加训练的次数：
 
 ```
 He went over to the gate of the café. It was like a country bed.
- “Do you know it’s been me.”
- “Damned us,” Bill said.
- “I was dangerous,” I said. “You were she did it and think I would a fine cape you,” I said.
- “I can’t look strange in the cab.”
- “You know I was this is though,” Brett said.
- “It’s a fights no matter?”
- “It makes to do it.”
- “You make it?”
- “Sit down,” I said. “I wish I wasn’t do a little with the man.”
- “You found it.”
- “I don’t know.”
- “You see, I’m sorry of chatches,” Bill said. “You think it’s a friend off back and make you really drunk.”
+ “Do you know it’s been me.”
+ “Damned us,” Bill said.
+ “I was dangerous,” I said. “You were she did it and think I would a fine cape you,” I said.
+ “I can’t look strange in the cab.”
+ “You know I was this is though,” Brett said.
+ “It’s a fights no matter?”
+ “It makes to do it.”
+ “You make it?”
+ “Sit down,” I said. “I wish I wasn’t do a little with the man.”
+ “You found it.”
+ “I don’t know.”
+ “You see, I’m sorry of chatches,” Bill said. “You think it’s a friend off back and make you really drunk.”
 ```
 
 现在差不多能看了，有些句式还是很模仿 Hemingway’s 的风格的，而原作者的内容是：
 
 ```
 There were a few people inside at the bar, and outside, alone, sat Harvey Stone. He had a pile of saucers in front of him, and he needed a shave.
- “Sit down,” said Harvey, “I’ve been looking for you.”
- “What’s the matter?”
- “Nothing. Just looking for you.”
- “Been out to the races?”
- “No. Not since Sunday.”
- “What do you hear from the States?”
- “Nothing. Absolutely nothing.”
- “What’s the matter?”
+ “Sit down,” said Harvey, “I’ve been looking for you.”
+ “What’s the matter?”
+ “Nothing. Just looking for you.”
+ “Been out to the races?”
+ “No. Not since Sunday.”
+ “What do you hear from the States?”
+ “Nothing. Absolutely nothing.”
+ “What’s the matter?”
 ```
 
 ## Super Mario: 利用神经网络进行 Mario 过关训练
@@ -642,8 +642,8 @@ img_aug.add_random_blur(sigma_max=3.)
 
 # Input is a 32x32 image with 3 color channels (red, green and blue)
 network = input_data(shape=[None, 32, 32, 3],
-                     data_preprocessing=img_prep,
-                     data_augmentation=img_aug)
+                     data_preprocessing=img_prep,
+                     data_augmentation=img_aug)
 
 
 # Step 1: Convolution
@@ -680,8 +680,8 @@ network = fully_connected(network, 2, activation='softmax')
 
 # Tell tflearn how we want to train the network
 network = regression(network, optimizer='adam',
-                     loss='categorical_crossentropy',
-                     learning_rate=0.001)
+                     loss='categorical_crossentropy',
+                     learning_rate=0.001)
 
 
 # Wrap the network in a model object
@@ -690,9 +690,9 @@ model = tflearn.DNN(network, tensorboard_verbose=0, checkpoint_path='bird-classi
 
 # Train it! We'll do 100 training passes and monitor it as it goes.
 model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
-          show_metric=True, batch_size=96,
-          snapshot_epoch=True,
-          run_id='bird-classifier')
+          show_metric=True, batch_size=96,
+          snapshot_epoch=True,
+          run_id='bird-classifier')
 
 
 # Save model when training is complete to a file
@@ -707,7 +707,7 @@ print("Network trained and saved as bird-classifier.tfl!")
 我们可以使用如下脚本进行图片的分类预测：
 
 ```py
-  # -*- coding: utf-8 -*-
+  # -*- coding: utf-8 -*-
 from __future__ import division, print_function, absolute_import
 
 import tflearn
@@ -736,8 +736,8 @@ img_aug.add_random_blur(sigma_max=3.)
 
 
 network = input_data(shape=[None, 32, 32, 3],
-                     data_preprocessing=img_prep,
-                     data_augmentation=img_aug)
+                     data_preprocessing=img_prep,
+                     data_augmentation=img_aug)
 network = conv_2d(network, 32, 3, activation='relu')
 network = max_pool_2d(network, 2)
 network = conv_2d(network, 64, 3, activation='relu')
@@ -747,8 +747,8 @@ network = fully_connected(network, 512, activation='relu')
 network = dropout(network, 0.5)
 network = fully_connected(network, 2, activation='softmax')
 network = regression(network, optimizer='adam',
-                     loss='categorical_crossentropy',
-                     learning_rate=0.001)
+                     loss='categorical_crossentropy',
+                     learning_rate=0.001)
 
 
 model = tflearn.DNN(network, tensorboard_verbose=0, checkpoint_path='bird-classifier.tfl.ckpt')
@@ -772,9 +772,9 @@ is_bird = np.argmax(prediction[0]) == 1
 
 
 if is_bird:
-    print("That's a bird!")
+    print("That's a bird!")
 else:
-    print("That's not a bird!")
+    print("That's not a bird!")
 ```
 
 ## How accurate is 95% accurate?: 怎么理解这 95% 的准确率
