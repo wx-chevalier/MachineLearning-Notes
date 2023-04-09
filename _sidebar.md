@@ -1,8 +1,8 @@
-  - [1 0.导论 [4]](/0.导论/README.md)
-    - [1.1 MachineLearning Is Fun For Anyone Curious About ML](/0.导论/MachineLearning-Is-Fun-For-Anyone-Curious-About-ML.md)
-    - [1.2 机器学习三要素](/0.导论/机器学习三要素.md)
-    - [1.3 机器学习简史](/0.导论/机器学习简史.md)
-    - [1.4 机器学习算法](/0.导论/机器学习算法.md)
+  - [1 00.导论 [4]](/00.导论/README.md)
+    - [1.1 MachineLearning Is Fun For Anyone Curious About ML](/00.导论/MachineLearning-Is-Fun-For-Anyone-Curious-About-ML.md)
+    - [1.2 机器学习三要素](/00.导论/机器学习三要素.md)
+    - [1.3 机器学习简史](/00.导论/机器学习简史.md)
+    - [1.4 机器学习算法](/00.导论/机器学习算法.md)
   - 2 99.参考资料 [1]
     - [2.1 Machine Learning From Scratch](/99.参考资料/Machine%20Learning%20From%20Scratch/README.md)
       
