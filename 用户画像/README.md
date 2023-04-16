@@ -1,3 +1,3 @@
 # 用户画像
 
-![](https://i.postimg.cc/yYp9bL64/image.png)
+![用户画像](https://assets.ng-tech.icu/item/20230416205246.png)

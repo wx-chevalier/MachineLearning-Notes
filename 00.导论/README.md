@@ -1,6 +1,6 @@
 # 机器学习
 
-![机器学习版图](https://i.postimg.cc/QCyrcnXk/image.png)
+![机器学习版图](https://assets.ng-tech.icu/item/20230416205319.png)
 
 # 程序与学习
 
