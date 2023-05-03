@@ -1,4 +1,4 @@
-﻿> 系列翻译自 [machine-learning-is-fun-part-1](https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471#.dniejuowp)，原文共分三个部分，笔者在这里合并到一篇文章中，并且对内容进行了重新排版以方便阅读，归档到了 [人工智能与深度学习实战--机器学习篇中](https://github.com/wx-chevalier/AIDL-Series) 中。
+﻿> 系列翻译自 [machine-learning-is-fun-part-1](https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471#.dniejuowp)，原文共分三个部分，笔者在这里合并到一篇文章中，并且对内容进行了重新排版以方便阅读，归档到了 [人工智能与深度学习实战--机器学习篇中](https://github.com/wx-chevalier/AIDL-Notes) 中。
 
 # What is Machine Learning:Machine Learning 的概念与算法介绍
 
