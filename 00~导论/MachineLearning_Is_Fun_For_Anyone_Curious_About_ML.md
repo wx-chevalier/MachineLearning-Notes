@@ -75,14 +75,14 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
     # 房间越多一般越值钱
     price = price + (num_of_bedrooms * 1000)
  return price
-```python
+```
 这就是典型的简答的基于经验的条件式判断，你也能通过这种方法得出一个较好地模型。不过如果数据多了或者价格发生较大波动的时候，你就有心无力了。而应用机器学习算法则是让计算机去帮你总结出这个规律，大概如下所示：
 
 ```py
 def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
   price = <computer, plz do some math for me>
   return price
-```python
+```
 通俗的理解，价格好比一锅炖汤，而卧室的数量、客厅面积以及邻近的街区就是食材，计算机帮你自动地根据不同的食材炖出不同的汤来。如果你是喜欢数学的，那就好比有三个自变量的方程，代码表述的话大概是下面这个样子：
 
 ```py
@@ -97,7 +97,7 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
  # and finally, just a little extra salt for good measure
  price += 201.23432095
  return price
-```python
+```
 注意，上面那些譬如 `.841...` 这样奇怪的数据，它们就是被称为 `权重`，只要我们能根据数据寻找出最合适的权重，那我们的函数就能较好地预测出房屋的价格。
 
 ## Weights
@@ -120,7 +120,7 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
   # and finally, just a little extra salt for good measure
   price += 1.0
   return price
-```python
+```
 ### Step 2
 
 拿已知的数据来跑一波，看看预测出来的值和真实值之间有多少差距，大概效果如下所示:
@@ -194,7 +194,7 @@ def estimate_house_sales_price(num_of_bedrooms, sqft, neighborhood):
 # maybe a handful of this
  price += neighborhood * 0.57
 return price
-```python
+```
 如果用图来表示的话，大概是这个样子
 
 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-LlTIwE6h0l1Aoln2GlAGcw.png)
@@ -232,7 +232,7 @@ return price
 
 ```python
 Robert Cohn was once middleweight boxi
-```python
+```
 你可能会猜想是`n`，这样整个词汇就是`boxing`，这是基于你看过了前面的语句以及基本的英文语法得出的推论，另外，`middleweight`这个单词也给了我们额外的提示，跟在它后面的是`boxing`。换言之，在文本预测中，如果你能将句子的上下文也考虑进来，再加上基本的语法知识就能较为准确地预测出下一个可能的字符。因此，我们需要给上面描述的神经网络模型添加一些状态信息，也就是所谓的上下文的信息:
 
 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-dcdVATcm0yJQxr4jGG5bFA.png)
@@ -252,7 +252,7 @@ hjCTCnhoofeoxelif edElobe negnk e iohehasenoldndAmdaI ayio pe e h’e btentmuhge
 Ddelnss.eelaishaner” cot AAfhB ht ltny
 ehbih a”on bhnte ectrsnae abeahngy
 amo k ns aeo?cdse nh a taei.rairrhelardr er deffijha
-```python
+```
 惨不忍睹啊，继续进行训练，大概 1000 次迭代之后，内容看起来好一点了：
 
 ```python
@@ -260,7 +260,7 @@ hing soor ither. And the caraos, and the crowebel for figttier and ale the room 
 inick stalling that aid.
  “Hon’t me and acrained on .Hw’s don’t you for the roed,” In’s pair.”
  “Alough marith him.”
-```python
+```
 已经能够识别基本的句型结构与语法规则咯，甚至能够较好地为上下文添加标点符号了，不过还是存在着大量的无意义词汇，我们继续增加训练的次数：
 
 ```python
@@ -277,7 +277,7 @@ He went over to the gate of the café. It was like a country bed.
  “You found it.”
  “I don’t know.”
  “You see, I’m sorry of chatches,” Bill said. “You think it’s a friend off back and make you really drunk.”
-```python
+```
 现在差不多能看了，有些句式还是很模仿 Hemingway’s 的风格的，而原作者的内容是：
 
 ```python
@@ -290,7 +290,7 @@ There were a few people inside at the bar, and outside, alone, sat Harvey Stone.
  “What do you hear from the States?”
  “Nothing. Absolutely nothing.”
  “What’s the matter?”
-```python
+```
 ## Super Mario: 利用神经网络进行 Mario 过关训练
 
 In 2015, Nintendo 宣布了 [Super Mario Maker™](http://supermariomaker.nintendo.com/) 用于 Wii U 游戏系统上。
@@ -322,7 +322,7 @@ In 2015, Nintendo 宣布了 [Super Mario Maker™](http://supermariomaker.ninten
 -------===--===------====-
 ------====--====----=====-
 =========================-
-```python
+```
 其中：
 
 - `-` 代表空白
@@ -364,7 +364,7 @@ In 2015, Nintendo 宣布了 [Super Mario Maker™](http://supermariomaker.ninten
 -----=======
 ---=========
 ---=========
-```python
+```
 然后就可以使用上面创建好的模型进行训练咯，经过几轮训练之后大概可以得出这个样子：
 
 ```--------------------------
@@ -378,7 +378,7 @@ LL+<&=------P-------------
 --------------=----=<----
 -------b
 -
-```python
+```
 最初的训练里模型认知到应该大量的出现`-`与`=`字符，不过还是很粗糙，再经过几千次的训练，得出的内容是：
 
 ```--
@@ -392,7 +392,7 @@ LL+<&=------P-------------
 -------?---=
 -----------=
 -----------=
-```python
+```
 此时模型已经能够认知到需要将每行保证相同的长度，甚至开始寻找出 Mario 内在的规律：管道呢一般都是两个块这么宽，所以它将所有的`P`都放到了 2\*2 的矩阵中，聪明了一点啊。继续学习：
 
 ```python
@@ -404,7 +404,7 @@ LL+<&=------P-------------
 ---PPP=---=
 ---PPP=---=
 ----------=
-```python
+```
 ![](http://7u2q25.com1.z0.glb.clouddn.com/1-MSFyG2WgN_TdFPuQRIeOFA.png)
 
 看上去像模像样了，其中有几个需要特别注意的地方：
@@ -664,7 +664,7 @@ model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
 # Save model when training is complete to a file
 model.save("bird-classifier.tfl")
 print("Network trained and saved as bird-classifier.tfl!")
-```python
+```
 如果你有足够的 RAM，譬如 Nvidia GeForce GTX 980 Ti 或者更好地硬件设备，大概能在 1 小时内训练结束，如果是普通的电脑，时间要耗费地更久一点。随着一轮一轮地训练，准确度也在不断提高，第一轮中准确率只有 75.4%，十轮之后准确率到 91.7%，在 50 轮之后，可以达到 95.5% 的准确率。
 
 ### Testing out Network
@@ -732,7 +732,7 @@ if is_bird:
     print("That's a bird!")
 else:
     print("That's not a bird!")
-```python
+```
 ## How accurate is 95% accurate?: 怎么理解这 95% 的准确率
 
 刚才有提到，我们的程序有 95% 的准确度，不过这并不意味着你拿张图片来，就肯定有 95% 的概率进行准确分类。举个栗子，如果我们的训练数据中有 5% 的图片是鸟类而其他 95% 的都不是鸟类，那么就意味着每次预测其实不是鸟类的准确度达到 95%。因此，我们不仅要关注整体的分类的准确度，还需要关注分类正确的数目，以及哪些图片分类失败，为啥失败的。这里我们假设预测结果并不是简单的正确或者错误，而是分到不同的类别中：
